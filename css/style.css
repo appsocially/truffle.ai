@@ -6,14 +6,15 @@
 */
 
 /* ==== Google font ==== */
-@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,600,700,800|Lato:100,400,300,700');
+/*@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,600,700,800|Lato:100,400,300,700');*/
 /* --- pe-icon-7-stroke --- */
 
 
 body {
     width: 100%;
     height: 100%;
-    font-family: 'Open Sans', sans-serif;
+    /* font-family: 'Open Sans', sans-serif; */
+    font-family: "KozGoPro-Light", "小塚ゴシック Pro L", "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "游ゴシック", YuGothic, "メイリオ", Meiryo, sans-serif;
 	font-weight: 300;
     color: #666;
     background: #fff;
@@ -1796,3 +1797,41 @@ a.btn:focus{
 		padding:60px 0 0;
 	}
 }
+
+/* added by tz */
+.truffle-primary {
+	color: #ff6666;
+}
+
+.truffle-secondary {
+	color: #ffcccc;
+}
+
+.truffle-bg-primary {
+    background: #ff6666;
+}
+
+.truffle-bg-secondary {
+    background: #ffcccc;
+}
+
+.btn-truffle {
+    background: #ff6666;
+    color: #ffffff;
+}
+
+.btn-truffle:hover, .btn-truffle:focus, 
+.btn-truffle:active, .btn-truffle:active:focus, .btn-truffle:active:hover, .btn-truffle:active.focus,
+.btn-truffle.active, .btn-truffle.active:focus, .btn-truffle.active:hover, .btn-truffle.active.focus,
+.open > .dropdown-toggle.btn-truffle, 
+.open > .dropdown-toggle.btn-truffle:hover,
+.open > .dropdown-toggle.btn-truffle:focus, 
+.open > .dropdown-toggle.btn-truffle.focus,
+.btn-truffle.disabled:hover, .btn-truffle[disabled]:hover, fieldset[disabled] .btn-truffle:hover,
+.btn-truffle.disabled:focus, .btn-truffle[disabled]:focus, fieldset[disabled] .btn-truffle:focus,
+.btn-truffle.disabled.focus, .btn-truffle[disabled].focus, fieldset[disabled] .btn-truffle.focus {
+    background: #ff6666;
+    color: #ffcccc;
+}
+
+
