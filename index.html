@@ -29,7 +29,8 @@
   <link href="css/nivo-lightbox.css" rel="stylesheet" />
   <link href="css/nivo-lightbox-theme/default/default.css" rel="stylesheet" type="text/css" />
   <link href="css/animate.css" rel="stylesheet" />
-  <link href="css/style.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet" />
+  <link href="css/custom.css" rel="stylesheet" />
 
   <!-- template skin -->
   <link id="t-colors" href="color/default.css" rel="stylesheet">
@@ -102,11 +103,24 @@
     <section id="content1" class="home-section">
       <div class="container">
         <div class="row text-center">
-        <div class="col-md-2"></div>
-        <div class="col-md-8">
-		  <h6 style="line-height: 2.0;">カスタマーサポート業務用ビジネスチャットサービスChatCenter Aiで培った、コミュニケーション効率化を実現するチャットボット技術をあなたのビジネスに</h6>
+          <div class="col-md-2"></div>
+          <div class="col-md-8">
+    		    <h6 style="line-height: 2.0;">カスタマーサポート業務用ビジネスチャットサービスChatCenter Aiで培った、コミュニケーション効率化を実現するチャットボット技術をあなたのビジネスに</h6>
+          </div>
+          <div class="col-md-2"></div>
         </div>
-        <div class="col-md-2"></div>
+        <div id="conceptMovie" class="wrap-concept-movie">
+          <!--iframe src='https://player.vimeo.com/video/344598381', frameborder="0" allow="autoplay; fullscreen" allowfullscreen/-->
+          <script type="text/javascript">
+            // なぜか動的に足さないと他のコンテンツが表示されない
+            var conceptMovie = document.getElementById("conceptMovie")
+            var iframe = document.createElement("iframe")
+            iframe.src = "https://player.vimeo.com/video/344598381"
+            iframe.frameBorder = 0
+            iframe.allow = "autoplay; fullscreen"
+            iframe.allowFullscreen = true
+            conceptMovie.appendChild(iframe)
+          </script>
         </div>
       </div>
     </section>
