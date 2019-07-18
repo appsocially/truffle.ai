@@ -19,16 +19,16 @@
 // Header
 var MenuContent = [
   {
-    label: 'TOP',
+    label: 'トップ',
     func: 'to-top',
   },
   {
-    label: 'SIGN UP',
+    label: 'サインアップ',
     href: 'https://app.truffle.ai',
     target: 'brank',
   },
   {
-    label: 'CONTACT',
+    label: 'お問い合わせ',
     func: 'to-contact',
   },
 ];
