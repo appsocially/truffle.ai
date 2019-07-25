@@ -88,6 +88,20 @@ riot.tag2('module-how', '<div class="wrap-module f flex-between flex-wrap"> <ite
     });
 });
 
+riot.tag2('module-keep-in-touch', '<div class="wrap-module py40"> <h2 class="mb40">Keep in Touch</h2> <p class="mb20">Truffleや採用に関する情報を配信いたします。</p> <div class="wrap-form f flex-between pb30"> <textarea class="pt8 pl8" placeholder="メールアドレスを入力" id="addressInput"></textarea><span class="f fh" onclick="{sendMail}">送信</span> </div> </div>', 'module-keep-in-touch,[data-is="module-keep-in-touch"]{display:block;width:100%;background:#eeeeee} module-keep-in-touch .wrap-module,[data-is="module-keep-in-touch"] .wrap-module{width:90%;max-width:980px;margin:0 auto} module-keep-in-touch .wrap-module h2,[data-is="module-keep-in-touch"] .wrap-module h2{text-align:center;font-size:32px} module-keep-in-touch .wrap-module p,[data-is="module-keep-in-touch"] .wrap-module p{text-align:center} module-keep-in-touch .wrap-module .wrap-form,[data-is="module-keep-in-touch"] .wrap-module .wrap-form{max-width:400px;margin:0 auto} module-keep-in-touch .wrap-module .wrap-form textarea,[data-is="module-keep-in-touch"] .wrap-module .wrap-form textarea{resize:none;width:85%;height:38px;filter:drop-shadow(1px 1px 1px rgba(100,100,100,0.6));border-radius:3px;background:#ffffff} module-keep-in-touch .wrap-module .wrap-form span,[data-is="module-keep-in-touch"] .wrap-module .wrap-form span{width:13%;height:38px;filter:drop-shadow(1px 1px 1px rgba(100,100,100,0.6));border-radius:3px;background:#ffcc33}', '', function(opts) {
+    this.sendMail = function() {
+      const value = document.getElementById("addressInput").value
+      if(value=="" || value.indexOf("@") == -1){
+        alert("メールアドレスを正しく入力してください");
+        return;
+      }
+      sendMailForKeepInTouch(value)
+
+      document.getElementById("addressInput").value = ""
+      alert("メールアドレスが送信されました。")
+    }
+});
+
 riot.tag2('module-price-table', '<div class="wrap-module"> <item-h2 if="{opts.content.title}" content="{opts.content.title}"></item-h2> <div class="wrap-table"> <table> <thead> <th each="{th in opts.content.table.thead}">{th}</th> </thead> <tbody> <tr each="{trs in opts.content.table.trs}"> <td each="{td in trs}"> <p if="{td.text}">{td.text}</p> <div class="img f fh"><img if="{td.check}" src="./img/icon/check.svg"></div> </td> </tr> </tbody> </table> </div> </div>', 'module-price-table,[data-is="module-price-table"]{display:block;width:100%;background:#e0e0e0} module-price-table .wrap-module,[data-is="module-price-table"] .wrap-module{width:90%;max-width:1048px;margin:0 auto} module-price-table .wrap-module .wrap-table,[data-is="module-price-table"] .wrap-module .wrap-table{margin:0 auto} module-price-table .wrap-module .wrap-table table,[data-is="module-price-table"] .wrap-module .wrap-table table{width:100%;background:#ffffff;border-radius:3px;overflow:hidden} module-price-table .wrap-module .wrap-table table tr td,[data-is="module-price-table"] .wrap-module .wrap-table table tr td{text-align:center;font-weight:lighter} module-price-table .wrap-module .wrap-table table,[data-is="module-price-table"] .wrap-module .wrap-table table,module-price-table .wrap-module .wrap-table th,[data-is="module-price-table"] .wrap-module .wrap-table th,module-price-table .wrap-module .wrap-table td,[data-is="module-price-table"] .wrap-module .wrap-table td{border-collapse:collapse;border:.5px solid rgba(0,0,0,0.1);line-height:1.5;padding:6px}', 'class="py40"', function(opts) {
     this.on('mount', function(){
 
@@ -149,7 +163,7 @@ riot.tag2('module-problem', '<div class="wrap-module py40"> <h2 class="lead mb24
     }
 });
 
-riot.tag2('module-user-flow', '<div class="wrap-module py40"> <div class="wrap-module-content f flex-between"> <div class="wrap-user-flow-item mb20" each="{item in content}"> <h3 class="mb12">{item.title}</h3><img riot-src="{item.src}"> </div> </div> <div class="wrap-demo-iframe py40"> <p class="mb12">候補者がQRを読み込むと...</p> <div class="wrap-iframe f fc"> <iframe src="https://demo.truffle.ai/jobs/pJXyHZXaldW1Ael90jdL42bu6Pg2/I50eomEXZFI5GxgC7kXk?campaignInfo=eyJvd25lcklkIjoicEpYeUhaWGFsZFcxQWVsOTBqZEw0MmJ1NlBnMiIsIm93bmVyU2NlbmFyaW9JZCI6Ikk1MGVvbUVYWkZJNUd4Z0M3a1hrIiwiY2FtcGFpZ25JZCI6Ik0iLCJjYW1wYWlnblR5cGUiOiJtYXN0ZXIifQ%3D%3D"></iframe> </div> </div> <div class="f fc mt10 pb10"> <item-cta-button content="{cta}"></item-cta-button> </div> </div>', 'module-user-flow,[data-is="module-user-flow"]{display:block;width:100%;background:#eeeeee} module-user-flow .wrap-module,[data-is="module-user-flow"] .wrap-module{width:90%;max-width:980px;margin:0 auto} module-user-flow .wrap-module h2,[data-is="module-user-flow"] .wrap-module h2{text-align:center;font-size:32px} module-user-flow .wrap-module .wrap-user-flow-item,[data-is="module-user-flow"] .wrap-module .wrap-user-flow-item{width:32%} module-user-flow .wrap-module .wrap-user-flow-item h3,[data-is="module-user-flow"] .wrap-module .wrap-user-flow-item h3{text-align:center} module-user-flow .wrap-module .wrap-demo-iframe p,[data-is="module-user-flow"] .wrap-module .wrap-demo-iframe p{text-align:center} module-user-flow .wrap-module .wrap-demo-iframe iframe,[data-is="module-user-flow"] .wrap-module .wrap-demo-iframe iframe{border:none;width:100%;max-width:375px;height:580px}@media only screen and (max-width : 600px){ module-user-flow .wrap-module-content,[data-is="module-user-flow"] .wrap-module-content{display:block} module-user-flow .wrap-module-content .wrap-user-flow-item,[data-is="module-user-flow"] .wrap-module-content .wrap-user-flow-item{width:90%;margin:0 auto}}', '', function(opts) {
+riot.tag2('module-user-flow', '<div class="wrap-module py40"> <div class="wrap-module-content f flex-between"> <div class="wrap-user-flow-item mb20" each="{item in content}"> <h3 class="mb12">{item.title}</h3><img riot-src="{item.src}"> </div> </div> <div class="wrap-demo-iframe py40"> <p class="mb12">候補者がQRを読み込むと...</p> <div class="wrap-iframe f fc"> <iframe src="https://demo.truffle.ai/jobs/WbWZk1rWqBSm9JYkZ7dpAuGEp2V2/I50eomEXZFI5GxgC7kXk?campaignInfo=eyJvd25lcklkIjoiV2JXWmsxcldxQlNtOUpZa1o3ZHBBdUdFcDJWMiIsIm93bmVyU2NlbmFyaW9JZCI6Ikk1MGVvbUVYWkZJNUd4Z0M3a1hrIiwiY2FtcGFpZ25JZCI6Ik0iLCJjYW1wYWlnblR5cGUiOiJtYXN0ZXIifQ%3D%3D"></iframe> </div> </div> <div class="f fc mt10 pb10"> <item-cta-button content="{cta}"></item-cta-button> </div> </div>', 'module-user-flow,[data-is="module-user-flow"]{display:block;width:100%;background:#eeeeee} module-user-flow .wrap-module,[data-is="module-user-flow"] .wrap-module{width:90%;max-width:980px;margin:0 auto} module-user-flow .wrap-module h2,[data-is="module-user-flow"] .wrap-module h2{text-align:center;font-size:32px} module-user-flow .wrap-module .wrap-user-flow-item,[data-is="module-user-flow"] .wrap-module .wrap-user-flow-item{width:32%} module-user-flow .wrap-module .wrap-user-flow-item h3,[data-is="module-user-flow"] .wrap-module .wrap-user-flow-item h3{text-align:center} module-user-flow .wrap-module .wrap-demo-iframe p,[data-is="module-user-flow"] .wrap-module .wrap-demo-iframe p{text-align:center} module-user-flow .wrap-module .wrap-demo-iframe iframe,[data-is="module-user-flow"] .wrap-module .wrap-demo-iframe iframe{border:none;width:100%;max-width:375px;height:580px}@media only screen and (max-width : 600px){ module-user-flow .wrap-module-content,[data-is="module-user-flow"] .wrap-module-content{display:block} module-user-flow .wrap-module-content .wrap-user-flow-item,[data-is="module-user-flow"] .wrap-module-content .wrap-user-flow-item{width:90%;margin:0 auto}}', '', function(opts) {
     this.content = [
       {
         title: '1. 求職者がQR/URLを読み込む',
@@ -261,7 +275,7 @@ riot.tag2('page-test', '<div class="wrap-page"></div> <h2>test</h2>', 'page-test
     });
 });
 
-riot.tag2('page-top', '<div class="wrap-page"> <module-hiro></module-hiro> <module-about></module-about> <module-user-flow></module-user-flow> <module-problem></module-problem> <module-what></module-what> <module-price></module-price> <footer></footer> </div> <float-action-button></float-action-button>', 'page-top .wrap-page,[data-is="page-top"] .wrap-page{display:block;width:100%;height:100%;background:#FFFFFF}', '', function(opts) {
+riot.tag2('page-top', '<div class="wrap-page"> <module-hiro></module-hiro> <module-about></module-about> <module-user-flow></module-user-flow> <module-problem></module-problem> <module-what></module-what> <module-price></module-price> <module-keep-in-touch></module-keep-in-touch> <footer></footer> </div> <float-action-button></float-action-button> <chat-contact-window></chat-contact-window>', 'page-top .wrap-page,[data-is="page-top"] .wrap-page{display:block;width:100%;height:100%;background:#FFFFFF}', '', function(opts) {
     var self = this;
 
     this.contents = Contents;
@@ -277,7 +291,16 @@ riot.tag2('temp', '', '', '', function(opts) {
     });
 });
 
-riot.tag2('float-action-button', '<a class="f fh" href="#chat"><img src="./img/icon/chat.svg"></a>', 'float-action-button,[data-is="float-action-button"]{position:fixed;z-index:10;display:block;width:58px;height:58px;right:12px;bottom:12px;border-radius:50%;background:#ffcc33;filter:drop-shadow(1px 1px 1px rgba(100,100,100,0.6))} float-action-button a,[data-is="float-action-button"] a{width:100%;height:100%} float-action-button a img,[data-is="float-action-button"] a img{width:34px;height:34px}', '', function(opts) {
+riot.tag2('chat-contact-window', '<div class="wrap-chat-window"> <div class="wrap-chat-header f fm flex-right"><img class="mr8" onclick="{close}" src="/img/icon/close.svg"></div> <div class="wrap-iframe"> <iframe src="https://ii.chatcenter.ai/chat/TruffleAI"></iframe> </div> </div>', 'chat-contact-window,[data-is="chat-contact-window"]{position:fixed;z-index:10;display:none;width:320px;height:500px;right:12px;bottom:12px;border-radius:3px;background:#ffffff;overflow:hidden;filter:drop-shadow(1px 1px 1px rgba(100,100,100,0.6))} chat-contact-window .wrap-chat-window .wrap-chat-header,[data-is="chat-contact-window"] .wrap-chat-window .wrap-chat-header{background:#ffcc33;height:36px} chat-contact-window .wrap-chat-window .wrap-chat-header img,[data-is="chat-contact-window"] .wrap-chat-window .wrap-chat-header img{width:24px;cursor:pointer} chat-contact-window .wrap-chat-window iframe,[data-is="chat-contact-window"] .wrap-chat-window iframe{display:block;border:none;width:100%;height:calc(464px);background:#FFF} chat-contact-window .wrap-chat-window iframe ion-header,[data-is="chat-contact-window"] .wrap-chat-window iframe ion-header{display:none !important}', '', function(opts) {
+    this.close = () => {
+      $("chat-contact-window").fadeOut(400);
+    }
+});
+
+riot.tag2('float-action-button', '<a class="f fh" onclick="{openChatWindow}"><img src="./img/icon/chat.svg"></a>', 'float-action-button,[data-is="float-action-button"]{position:fixed;z-index:10;display:block;width:58px;height:58px;right:12px;bottom:12px;border-radius:50%;background:#ffcc33;filter:drop-shadow(1px 1px 1px rgba(100,100,100,0.6))} float-action-button a,[data-is="float-action-button"] a{width:100%;height:100%} float-action-button a img,[data-is="float-action-button"] a img{width:34px;height:34px}', '', function(opts) {
+    this.openChatWindow = () => {
+      $('chat-contact-window').fadeIn(400);
+    }
 });
 
 riot.tag2('footer', '<div class="wrap-menu pt40 pb10 f flex-around flex-wrap"> <div class="mr12 mb12 f fc" each="{item in menu}"><a href="{item.href}" target="brank">{item.label}</a></div> </div> <div class="wrap-copy f fh"> <p class="copy">© 2011-2019 AppSocially Inc.</p> </div>', 'footer,[data-is="footer"]{display:block;width:100%;background:#ffcc33} footer .wrap-menu,[data-is="footer"] .wrap-menu{width:90%;margin:0 auto;max-width:680px} footer .wrap-menu div,[data-is="footer"] .wrap-menu div{width:20%} footer .wrap-menu div a,[data-is="footer"] .wrap-menu div a{display:inline-block;color:#2a2a2a;font-weight:lighter} footer .wrap-copy,[data-is="footer"] .wrap-copy{width:100%;height:80px} footer .wrap-copy .copy,[data-is="footer"] .wrap-copy .copy{text-align:center;color:#2a2a2a;font-weight:lighter;font-size:14px;letter-spacing:1.2px}', '', function(opts) {
@@ -303,7 +326,8 @@ riot.tag2('header', '<div class="wrap-header f flex-between"><a class="wrap-logo
       });
 
       $('.to-contact').click(function() {
-        window.location.href = '#/chat';
+
+        $("chat-contact-window").fadeIn(400);
       });
 
     });
