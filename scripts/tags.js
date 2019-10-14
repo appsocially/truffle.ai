@@ -22,6 +22,9 @@ riot.tag2('item-cta-button', '<a class="px18 py12" href="{href}" target="brank">
     this.href = this.opts.content.href
 });
 
+riot.tag2('item-example-card', '<div class="wrap-item py30"> <div class="wrap-img mb20 f fh"><img riot-src="{opts.content.src}"></div> <div class="wrap-texts"> <h2 class="title mb12">{opts.content.title}</h2> <p class="sentence">{opts.content.text}</p> </div> </div>', 'item-example-card,[data-is="item-example-card"]{display:block;width:49%;background:#ffffff} item-example-card .wrap-item,[data-is="item-example-card"] .wrap-item{width:100%;height:100%} item-example-card .wrap-item .wrap-img img,[data-is="item-example-card"] .wrap-item .wrap-img img{width:60%} item-example-card .wrap-item .wrap-texts,[data-is="item-example-card"] .wrap-item .wrap-texts{width:90%;margin:0 auto} item-example-card .wrap-item .wrap-texts .title,[data-is="item-example-card"] .wrap-item .wrap-texts .title{text-align:center;font-size:16px;color:#2a2a2a} item-example-card .wrap-item .wrap-texts .sentence,[data-is="item-example-card"] .wrap-item .wrap-texts .sentence{font-size:16px;color:#2a2a2a;font-weight:lighter;line-height:1.6}@media only screen and (max-width : 600px){ item-example-card,[data-is="item-example-card"]{width:100%;margin-bottom:14px}}', '', function(opts) {
+});
+
 riot.tag2('item-h2', '<div class="wrap-item"> <h2 class="mb30">{opts.content}</h2> </div>', 'item-h2,[data-is="item-h2"]{width:100%} item-h2 .wrap-item h2,[data-is="item-h2"] .wrap-item h2{color:#2a2a2a;text-align:center;font-size:26px;font-weight:500}', '', function(opts) {
 });
 
@@ -48,7 +51,7 @@ riot.tag2('item-what-card', '<div class="wrap-item py30"> <div class="wrap-img m
 riot.tag2('item-why-points-point', '<div class="wrap-item f flex-around"> <div class="wrap-img mr12 f fh"><img riot-src="{opts.content.src}"></div> <div class="wrap-text f fh"> <div> <p class="title mb12">{opts.content.title}</p> <p class="text">{opts.content.text}</p> </div> </div> </div>', 'item-why-points-point,[data-is="item-why-points-point"]{display:block;width:100%;border-radius:3px;background:#ffffff} item-why-points-point .wrap-item .wrap-img,[data-is="item-why-points-point"] .wrap-item .wrap-img{width:300px} item-why-points-point .wrap-item .wrap-img img,[data-is="item-why-points-point"] .wrap-item .wrap-img img{width:80%} item-why-points-point .wrap-item .wrap-text .title,[data-is="item-why-points-point"] .wrap-item .wrap-text .title{font-weight:bold} item-why-points-point .wrap-item .wrap-text .text,[data-is="item-why-points-point"] .wrap-item .wrap-text .text{line-height:1.4}', 'class="px20 py32 mb12"', function(opts) {
 });
 
-riot.tag2('module-about', '<div class="wrap-module py50"> <h2 class="lead mb24">About</h2> <div class="module-content"> <p class="mb14">Truffle AIは「このお店で働きたいな」という気持ちを確実に面接実施までつなげます。</p> </div> </div>', 'module-about,[data-is="module-about"]{display:block;width:100%;background:#eeeeee} module-about .wrap-module,[data-is="module-about"] .wrap-module{width:90%;max-width:980px;margin:0 auto} module-about .wrap-module h2,[data-is="module-about"] .wrap-module h2{text-align:center;font-size:32px} module-about .wrap-module .module-content p,[data-is="module-about"] .wrap-module .module-content p{font-size:18px;text-align:center} module-about .wrap-module .module-content .wrap-concept-movie,[data-is="module-about"] .wrap-module .module-content .wrap-concept-movie{position:relative;padding-bottom:56.25%;padding-top:30px;height:0;overflow:hidden} module-about .wrap-module .module-content .wrap-concept-movie iframe,[data-is="module-about"] .wrap-module .module-content .wrap-concept-movie iframe{border:none;position:absolute;top:0;left:0;width:100%;height:100%} module-about .wrap-module .module-content .caption,[data-is="module-about"] .wrap-module .module-content .caption{display:block;text-align:center}', '', function(opts) {
+riot.tag2('module-about', '<div class="wrap-module py50"> <h2 class="lead mb24">About</h2> <div class="module-content"> <p class="mb14">Truffle AIは応募から面接までの採用業務を全て自動で代行するチャットボットです。採用担当者の仕事を大幅に削減しながら、より確実な人材採用をサポートします。</p> </div> </div>', 'module-about,[data-is="module-about"]{display:block;width:100%;background:#eeeeee} module-about .wrap-module,[data-is="module-about"] .wrap-module{width:90%;max-width:980px;margin:0 auto} module-about .wrap-module h2,[data-is="module-about"] .wrap-module h2{text-align:center;font-size:32px} module-about .wrap-module .module-content p,[data-is="module-about"] .wrap-module .module-content p{font-size:18px;text-align:center} module-about .wrap-module .module-content .wrap-concept-movie,[data-is="module-about"] .wrap-module .module-content .wrap-concept-movie{position:relative;padding-bottom:56.25%;padding-top:30px;height:0;overflow:hidden} module-about .wrap-module .module-content .wrap-concept-movie iframe,[data-is="module-about"] .wrap-module .module-content .wrap-concept-movie iframe{border:none;position:absolute;top:0;left:0;width:100%;height:100%} module-about .wrap-module .module-content .caption,[data-is="module-about"] .wrap-module .module-content .caption{display:block;text-align:center}', '', function(opts) {
 });
 
 riot.tag2('module-article', '<div class="wrap-module"> <item-h2 if="{opts.content.title}" content="{opts.content.title}"></item-h2> <div class="wrap-card f flex-between flex-wrap"> <item-article-card each="{item in opts.content.cards}" content="{item}"></item-article-card> </div> </div>', 'module-article,[data-is="module-article"]{display:block;width:100%;background:#eeeeee} module-article .wrap-module,[data-is="module-article"] .wrap-module{width:90%;max-width:1048px;margin:0 auto} module-article .wrap-module .wrap-card,[data-is="module-article"] .wrap-module .wrap-card{width:80%;margin:0 auto}', 'class="py40"', function(opts) {
@@ -65,13 +68,37 @@ riot.tag2('module-article', '<div class="wrap-module"> <item-h2 if="{opts.conten
 riot.tag2('module-authority', '<div class="wrap-module"> <item-h2 if="{opts.content.title}" content="{opts.content.title}"></item-h2> <div class="wrap-card f flex-between flex-wrap"> <item-authority-card each="{item in opts.content.cards}" content="{item}"></item-authority-card> </div> </div>', 'module-authority,[data-is="module-authority"]{display:block;width:100%;background:#e0e0e0} module-authority .wrap-module,[data-is="module-authority"] .wrap-module{width:90%;max-width:1048px;margin:0 auto} module-authority .wrap-module .wrap-card,[data-is="module-authority"] .wrap-module .wrap-card{width:80%;margin:0 auto}@media only screen and (max-width : 600px){ module-authority .wrap-module .wrap-card,[data-is="module-authority"] .wrap-module .wrap-card{width:90%}}', 'class="py40"', function(opts) {
 });
 
+riot.tag2('module-example', '<div class="wrap-module py40"> <h2 class="mb24">製品の利用シーン</h2> <div class="wrap-card f flex-between flex-wrap"> <item-example-card each="{item in content}" content="{item}"></item-example-card> </div> </div>', 'module-example,[data-is="module-example"]{display:block;width:100%;background:#eeeeee} module-example .wrap-module,[data-is="module-example"] .wrap-module{width:90%;max-width:880px;margin:0 auto} module-example .wrap-module h2,[data-is="module-example"] .wrap-module h2{text-align:center;font-size:32px} module-example .wrap-module item-what-card,[data-is="module-example"] .wrap-module item-what-card{margin-bottom:20px !important}', '', function(opts) {
+    this.content = [
+      {
+        src: './img/contents/examples/in-shop.png',
+        title: '例えば飲食店での採用に',
+        text: '店舗の張り紙などにQRコードを載せることで、応募窓口を設置できます。',
+      },
+      {
+        src: './img/contents/examples/on-media.png',
+        title: '採用メディアからの応募に',
+        text: '採用メディアに応募用のURLを掲載することも可能です。',
+      }
+    ]
+
+    this.on('mount', function(){
+      var cardNum = $('item-example-card').length;
+      if(cardNum > 3){
+        for(var i=0; i<cardNum; i++){
+          $('item-example-card')[i].classList.add('mb40');
+        }
+      }
+    });
+});
+
 riot.tag2('module-hiro', '<div class="wrap-module f flex-around"> <div class="wrap-explain f fm"> <div class="explain"> <div class="texts mb50"> <p each="{item in texts}">{item}</p> </div> <item-cta-button content="{cta}"></item-cta-button> </div> </div> <div class="wrap-img f fm s-hide"><img src="./img/contents/iPhone.png"></div> </div> <div class="bg"></div>', 'module-hiro,[data-is="module-hiro"]{position:relative;display:block;width:100%;height:80vh} module-hiro .wrap-module,[data-is="module-hiro"] .wrap-module{position:relative;width:100%;height:100%;left:0;top:0;z-index:10;margin:0 auto;width:90%} module-hiro .wrap-module .wrap-explain,[data-is="module-hiro"] .wrap-module .wrap-explain{height:100%;padding-top:48px} module-hiro .wrap-module .wrap-explain .explain .texts p,[data-is="module-hiro"] .wrap-module .wrap-explain .explain .texts p{font-size:32px;color:#FFF} module-hiro .wrap-module .wrap-img,[data-is="module-hiro"] .wrap-module .wrap-img{padding-top:48px;width:300px;height:100%} module-hiro .bg,[data-is="module-hiro"] .bg{position:absolute;display:block;width:100%;height:100%;left:0;top:0;filter:brightness(.8);background-image:url(img/contents/hiro.jpg);background-position:center center;background-repeat:no-repeat;background-attachment:fixed;background-size:cover;background-color:#ffffff}@media only screen and (max-width : 600px){ module-hiro .wrap-module,[data-is="module-hiro"] .wrap-module{display:block} module-hiro .wrap-module .wrap-explain,[data-is="module-hiro"] .wrap-module .wrap-explain{height:100%;padding-top:48px} module-hiro .wrap-module .wrap-explain .explain .texts p,[data-is="module-hiro"] .wrap-module .wrap-explain .explain .texts p{font-size:22px}}', '', function(opts) {
     this.texts = [
-      "お店に合った、より良い採用を"
+      "採用を簡単に　採用をより確実に"
     ]
 
     this.cta = {
-      label: "資料請求",
+      label: "サインアップ",
       href: "https://app.truffle.ai/"
     }
 });
@@ -128,7 +155,7 @@ riot.tag2('module-price-table', '<div class="wrap-module"> <item-h2 if="{opts.co
     });
 });
 
-riot.tag2('module-price', '<div class="wrap-module py40"> <h2 class="mb24">Price</h2> <div class="wrap-price py10"> <div class="mb20" each="{item in content}"> <h3 class="mb8">{item.title}</h3> <p>{item.text}</p> </div> </div> <div class="mt40 f fc"> <item-cta-button content="{cta}"></item-cta-button> </div> </div>', 'module-price,[data-is="module-price"]{display:block;width:100%;background:#ffffff} module-price .wrap-module,[data-is="module-price"] .wrap-module{width:90%;max-width:880px;margin:0 auto} module-price .wrap-module h2,[data-is="module-price"] .wrap-module h2{text-align:center;font-size:32px}', '', function(opts) {
+riot.tag2('module-price', '<div class="wrap-module py40"> <h2 class="mb24">Price</h2> <div class="f fc py10"><span>月額1000円でご利用可能です。</span></div> <div class="mt40 f fc"> <item-cta-button content="{cta}"></item-cta-button> </div> </div>', 'module-price,[data-is="module-price"]{display:block;width:100%;background:#ffffff} module-price .wrap-module,[data-is="module-price"] .wrap-module{width:90%;max-width:880px;margin:0 auto} module-price .wrap-module h2,[data-is="module-price"] .wrap-module h2{text-align:center;font-size:32px}', '', function(opts) {
     this.content = [
       {
         title: '初期費用ゼロ円',
@@ -155,21 +182,34 @@ riot.tag2('module-price', '<div class="wrap-module py40"> <h2 class="mb24">Price
     });
 });
 
-riot.tag2('module-problem', '<div class="wrap-module py40"> <h2 class="lead mb24">Truffle AIの特徴</h2> <div class="wrap-problem-item f flex-between mb30" each="{item in contents}"> <img class="mr40" riot-src="{item.src}"> <div class="wrap-explain f fm"> <div> <h3 class="mb12">{item.title}</h3> <p>{item.explain}</p> </div> </div> </div> <div class="mt40 f fc"> <item-cta-button content="{cta}"></item-cta-button> </div> </div>', 'module-problem,[data-is="module-problem"]{display:block;width:100%;background:#ffffff} module-problem .wrap-module,[data-is="module-problem"] .wrap-module{width:90%;max-width:880px;margin:0 auto} module-problem .wrap-module h2,[data-is="module-problem"] .wrap-module h2{text-align:center;font-size:32px} module-problem .wrap-module .wrap-problem-item img,[data-is="module-problem"] .wrap-module .wrap-problem-item img{width:240px;border-radius:50%} module-problem .wrap-module .wrap-problem-item .wrap-img,[data-is="module-problem"] .wrap-module .wrap-problem-item .wrap-img{overflow:hidden} module-problem .wrap-module .wrap-problem-item .wrap-img img,[data-is="module-problem"] .wrap-module .wrap-problem-item .wrap-img img{width:240px;border-radius:50%} module-problem .wrap-module .wrap-problem-item .wrap-explain h3,[data-is="module-problem"] .wrap-module .wrap-problem-item .wrap-explain h3{font-size:22px}@media only screen and (max-width : 600px){ module-problem .wrap-problem-item,[data-is="module-problem"] .wrap-problem-item{display:block;margin-bottom:48px} module-problem .wrap-problem-item .wrap-img,[data-is="module-problem"] .wrap-problem-item .wrap-img{width:100%;margin-right:0 !important;margin-bottom:24px} module-problem .wrap-problem-item .wrap-img img,[data-is="module-problem"] .wrap-problem-item .wrap-img img{width:160px !important} module-problem .wrap-problem-item img,[data-is="module-problem"] .wrap-problem-item img{left:50%;margin-left:-120px;position:relative;margin-bottom:24px} module-problem .wrap-problem-item .wrap-explain h3,[data-is="module-problem"] .wrap-problem-item .wrap-explain h3{text-align:center}}', '', function(opts) {
+riot.tag2('module-problem', '<div class="wrap-module py40"> <h2 class="lead mb24">Truffle AIの特徴</h2> <div class="wrap-problem-item f flex-between mb40" each="{item in contents}"> <img class="mr40" riot-src="{item.src}"> <div class="wrap-explain f fm"> <div> <h3 class="mb12">{item.title}</h3> <p>{item.explain}</p> </div> </div> </div> <div class="mt40 f fc"> <item-cta-button content="{cta}"></item-cta-button> </div> </div>', 'module-problem,[data-is="module-problem"]{display:block;width:100%;background:#ffffff} module-problem .wrap-module,[data-is="module-problem"] .wrap-module{width:90%;max-width:880px;margin:0 auto} module-problem .wrap-module h2,[data-is="module-problem"] .wrap-module h2{text-align:center;font-size:32px} module-problem .wrap-module .wrap-problem-item img,[data-is="module-problem"] .wrap-module .wrap-problem-item img{width:200px;border-radius:50%} module-problem .wrap-module .wrap-problem-item .wrap-img,[data-is="module-problem"] .wrap-module .wrap-problem-item .wrap-img{overflow:hidden} module-problem .wrap-module .wrap-problem-item .wrap-img img,[data-is="module-problem"] .wrap-module .wrap-problem-item .wrap-img img{width:240px;border-radius:50%} module-problem .wrap-module .wrap-problem-item .wrap-explain h3,[data-is="module-problem"] .wrap-module .wrap-problem-item .wrap-explain h3{font-size:22px}@media only screen and (max-width : 600px){ module-problem .wrap-problem-item,[data-is="module-problem"] .wrap-problem-item{display:block;margin-bottom:48px} module-problem .wrap-problem-item .wrap-img,[data-is="module-problem"] .wrap-problem-item .wrap-img{width:100%;margin-right:0 !important;margin-bottom:24px} module-problem .wrap-problem-item .wrap-img img,[data-is="module-problem"] .wrap-problem-item .wrap-img img{width:160px !important} module-problem .wrap-problem-item img,[data-is="module-problem"] .wrap-problem-item img{left:50%;margin-right:0 !important;margin-left:-100px;position:relative;margin-bottom:24px} module-problem .wrap-problem-item .wrap-explain h3,[data-is="module-problem"] .wrap-problem-item .wrap-explain h3{text-align:center}}', '', function(opts) {
     this.contents = [
-      {
-        index: "Feature 1",
-        title: "面接業務を効率化",
-        explain: "採用担当者の仕事は当日面接を実施するのみ。接客や料理提供など、より良いお店づくりのために多くの時間を使えるようになります。",
-        src: "./img/contents/features/1-2.png"
-      },
-      {
-        index: "Feature 2",
-        title: "質の高い採用を",
-        explain: "採用を効率化しながらも、店舗の希望にあう人は面接日まで丁寧にサポート。採用の効率化と質の高い採用の両立を実現します。",
-        src: "./img/contents/features/2.jpg"
-      },
 
+      {
+        title: "日程調整業務をゼロに",
+        explain: "応募者の受付から面接日程の調整までを自動で完了。面接日程調整のコミュニケーション業務を大幅に削減することができます。",
+        src: "./img/contents/features/calendar.png"
+      },
+      {
+        title: "候補者の”興味”を応募まで誘導",
+        explain: "企業の特徴や募集要項など、応募者が知りたい情報をボットによる会話中で提供、回答が可能。応募時の心理的な障壁の軽減や応募意欲の喚起を期待することができます。",
+        src: "./img/contents/features/hearing.png"
+      },
+      {
+        title: "歩留まりを改善し面接実施率をアップ",
+        explain: "応募時の瞬時の面接設定とリマインドメールにより応募者の歩留まりを改善。大切な候補者をより確実に面接までご案内します。",
+        src: "./img/contents/features/notification.png"
+      },
+      {
+        title: "質の高い面接が可能に",
+        explain: "自社の採用基準に合った審査項目を面接前に把握できることで適合度が高い応募者のみとの面接が可能。面接機会を最大限に生かしながら、離職率の低い採用を期待することができます。",
+        src: "./img/contents/features/up.jpg"
+      },
+      {
+        title: "オリジナル採用チャットボットが数分で作成可能",
+        explain: "簡単な質問に答えていくだけで、自社のオリジナル採用チャットボットを数分で作成可能。登録から日程の確認まで、全ての機能をモバイル端末上で完了することができます。",
+        src: "./img/contents/features/time.png"
+      }
     ]
 
     this.cta = {
@@ -178,14 +218,14 @@ riot.tag2('module-problem', '<div class="wrap-module py40"> <h2 class="lead mb24
     }
 });
 
-riot.tag2('module-user-flow', '<div class="wrap-module pb40"> <div class="wrap-module-content f flex-between"> <div class="wrap-user-flow-item mb20" each="{item in content}"> <h3 class="mb12">{item.title}</h3><img riot-src="{item.src}"> </div> </div> <div class="f fc mt10 pb10"> <item-cta-button content="{cta}"></item-cta-button> </div> </div>', 'module-user-flow,[data-is="module-user-flow"]{display:block;width:100%;background:#eeeeee} module-user-flow .wrap-module,[data-is="module-user-flow"] .wrap-module{width:90%;max-width:980px;margin:0 auto} module-user-flow .wrap-module h2,[data-is="module-user-flow"] .wrap-module h2{text-align:center;font-size:32px} module-user-flow .wrap-module .wrap-user-flow-item,[data-is="module-user-flow"] .wrap-module .wrap-user-flow-item{width:32%} module-user-flow .wrap-module .wrap-user-flow-item h3,[data-is="module-user-flow"] .wrap-module .wrap-user-flow-item h3{text-align:center} module-user-flow .wrap-module .wrap-demo-iframe p,[data-is="module-user-flow"] .wrap-module .wrap-demo-iframe p{text-align:center} module-user-flow .wrap-module .wrap-demo-iframe iframe,[data-is="module-user-flow"] .wrap-module .wrap-demo-iframe iframe{border:none;width:100%;max-width:375px;height:580px}@media only screen and (max-width : 600px){ module-user-flow .wrap-module-content,[data-is="module-user-flow"] .wrap-module-content{display:block} module-user-flow .wrap-module-content .wrap-user-flow-item,[data-is="module-user-flow"] .wrap-module-content .wrap-user-flow-item{width:90%;margin:0 auto}}', '', function(opts) {
+riot.tag2('module-user-flow', '<div class="wrap-module pb40"> <div class="wrap-module-content f flex-between"> <div class="wrap-user-flow-item mb20" each="{item in content}"> <h3 class="mb12">{item.title}</h3><img riot-src="{item.src}"> </div> </div> <div class="wrap-demo-prototype f fc py20"> <div class="demo-prototype"><img src="./img/contents/user-flow/demo.gif"></div> </div> <div class="f fc mt10 pb10"> <item-cta-button content="{cta}"></item-cta-button> </div> </div>', 'module-user-flow,[data-is="module-user-flow"]{display:block;width:100%;background:#eeeeee} module-user-flow .wrap-module,[data-is="module-user-flow"] .wrap-module{width:90%;max-width:980px;margin:0 auto} module-user-flow .wrap-module h2,[data-is="module-user-flow"] .wrap-module h2{text-align:center;font-size:32px} module-user-flow .wrap-module .wrap-user-flow-item,[data-is="module-user-flow"] .wrap-module .wrap-user-flow-item{width:32%} module-user-flow .wrap-module .wrap-user-flow-item h3,[data-is="module-user-flow"] .wrap-module .wrap-user-flow-item h3{text-align:center} module-user-flow .wrap-module .wrap-demo-iframe p,[data-is="module-user-flow"] .wrap-module .wrap-demo-iframe p{text-align:center} module-user-flow .wrap-module .wrap-demo-iframe iframe,[data-is="module-user-flow"] .wrap-module .wrap-demo-iframe iframe{border:none;width:100%;max-width:375px;height:580px} module-user-flow .wrap-module .wrap-demo-prototype .demo-prototype,[data-is="module-user-flow"] .wrap-module .wrap-demo-prototype .demo-prototype{width:90%;max-width:300px}@media only screen and (max-width : 600px){ module-user-flow .wrap-module-content,[data-is="module-user-flow"] .wrap-module-content{display:block} module-user-flow .wrap-module-content .wrap-user-flow-item,[data-is="module-user-flow"] .wrap-module-content .wrap-user-flow-item{width:90%;margin:0 auto}}', '', function(opts) {
     this.content = [
       {
         title: '1. 求職者がQR/URLを読み込む',
         src: './img/contents/user-flow/1.png',
       },
       {
-        title: '2. AIが面接日時の設定を完了',
+        title: '2. 応募受付＆日程調整',
         src: './img/contents/user-flow/2.png',
       },
       {
@@ -214,22 +254,22 @@ riot.tag2('module-what', '<div class="wrap-module py40"> <h2 class="mb24">Truffl
       {
         src: './img/contents/functions/clock.jpg',
         title: '自動面接日程調整',
-        text: '応募受付や面接設定を自動化。応募受付から面接当日までの全ての業務がTruffle AIで完了します。',
+        text: '採用担当者の希望日程に合わせて、自動で面接日程を調整します。応募から面接設定が約1分で完了、候補者の興味を確実に面接に繋げます。',
+      },
+      {
+        src: './img/contents/functions/message.png',
+        title: '自社PRメッセージ',
+        text: '会社の特徴、代表のメッセージ等、候補者に向けて会社情報を伝えることが可能です。',
       },
       {
         src: './img/contents/functions/done_all.png',
-        title: 'スクリーニング',
-        text: '知りたい情報を事前に応募者から収集してお知らせ。面接前の一次選考が簡単に効率よく行えます。',
-      },
-      {
-        src: './img/contents/functions/custom.png',
-        title: 'カスタマイズ',
-        text: '応募受付の会話を自由にカスタマイズ可能。「応募を増やしたい」「採用を効率化したい」などお店の必要性に合わせてコミュニケーションを設計できます。',
+        title: '事前スクリーニング',
+        text: '資格、勤務日、語学力等の12種以上の項目より審査項目を選択でき、ボットが事前に把握するよう設定可能です。',
       },
       {
         src: './img/contents/functions/notification.jpg',
-        title: 'リマインダー',
-        text: '面接が確定した候補者には面接日をこまめにお知らせ。より確実に面接に誘導します。',
+        title: '面接のリマインド連絡',
+        text: '面接が近づくと双方にリマインドメールでお知らせし、面接まで丁寧に案内します。',
       }
     ]
 
@@ -295,7 +335,7 @@ riot.tag2('page-test', '<div class="wrap-page"></div> <h2>test</h2>', 'page-test
     });
 });
 
-riot.tag2('page-top', '<div class="wrap-page"> <module-hiro></module-hiro> <module-about></module-about> <module-user-flow></module-user-flow> <module-problem></module-problem> <module-what></module-what> <module-price></module-price> <module-keep-in-touch></module-keep-in-touch> <footer></footer> </div> <float-action-button></float-action-button> <chat-contact-window></chat-contact-window>', 'page-top .wrap-page,[data-is="page-top"] .wrap-page{display:block;width:100%;height:100%;background:#FFFFFF}', '', function(opts) {
+riot.tag2('page-top', '<div class="wrap-page"> <module-hiro></module-hiro> <module-about></module-about> <module-user-flow></module-user-flow> <module-problem></module-problem> <module-what></module-what> <module-example></module-example> <module-price></module-price> <module-keep-in-touch></module-keep-in-touch> <footer></footer> </div> <float-action-button></float-action-button> <chat-contact-window></chat-contact-window>', 'page-top .wrap-page,[data-is="page-top"] .wrap-page{display:block;width:100%;height:100%;background:#FFFFFF}', '', function(opts) {
     var self = this;
 
     this.contents = Contents;
