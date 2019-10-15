@@ -159,10 +159,13 @@ riot.tag2('module-price-table', '<div class="wrap-module"> <item-h2 if="{opts.co
 riot.tag2('module-price', '<div class="wrap-module py40"> <h2 class="mb24">料金</h2> <div class="wrap-price py10"> <div class="mb20" each="{item in content}"> <h3 class="mb8">{item.title}</h3> <p>{item.text}</p> </div> </div> <div class="mt40 f fc"> <item-cta-button content="{cta}"></item-cta-button> </div> </div>', 'module-price,[data-is="module-price"]{display:block;width:100%;background:#ffffff} module-price .wrap-module,[data-is="module-price"] .wrap-module{width:90%;max-width:880px;margin:0 auto} module-price .wrap-module h2,[data-is="module-price"] .wrap-module h2{text-align:center;font-size:32px}', '', function(opts) {
     this.content = [
       {
+        title: '成果報酬制',
+        text: '面接日程が確定した時にのみ、1件5000円が課金されるので無理のない採用活動ができます。',
+      },
+      {
         title: '14日間無料トライアル',
         text: '追加料金なしでいつでもキャンセル可能。まずは無料で始めてみましょう。',
-      },
-
+      }
     ]
 
     this.cta = {
@@ -204,7 +207,7 @@ riot.tag2('module-problem', '<div class="wrap-module py40"> <h2 class="lead mb24
         src: "./img/contents/features/up.jpg"
       },
       {
-        title: "オリジナル採用チャットボットが数分で作成可能",
+        title: "オリジナルボットを数分で作成可能",
         explain: "簡単な質問に答えていくだけで、自社のオリジナル採用チャットボットを数分で作成可能。登録から日程の確認まで、全ての機能をモバイル端末上で完了することができます。",
         src: "./img/contents/features/time.png"
       }
