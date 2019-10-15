@@ -92,14 +92,14 @@ riot.tag2('module-example', '<div class="wrap-module py40"> <h2 class="mb24">製
     });
 });
 
-riot.tag2('module-hiro', '<div class="wrap-module f flex-around"> <div class="wrap-explain f fm"> <div class="explain"> <div class="texts mb50"> <p each="{item in texts}">{item}</p> </div> <item-cta-button content="{cta}"></item-cta-button> </div> </div> <div class="wrap-img f fm s-hide"><img src="./img/contents/iPhone.png"></div> </div> <div class="bg"></div>', 'module-hiro,[data-is="module-hiro"]{position:relative;display:block;width:100%;height:80vh} module-hiro .wrap-module,[data-is="module-hiro"] .wrap-module{position:relative;width:100%;height:100%;left:0;top:0;z-index:10;margin:0 auto;width:90%} module-hiro .wrap-module .wrap-explain,[data-is="module-hiro"] .wrap-module .wrap-explain{height:100%;padding-top:48px} module-hiro .wrap-module .wrap-explain .explain .texts p,[data-is="module-hiro"] .wrap-module .wrap-explain .explain .texts p{font-size:32px;color:#FFF} module-hiro .wrap-module .wrap-img,[data-is="module-hiro"] .wrap-module .wrap-img{padding-top:48px;width:300px;height:100%} module-hiro .bg,[data-is="module-hiro"] .bg{position:absolute;display:block;width:100%;height:100%;left:0;top:0;filter:brightness(.8);background-image:url(img/contents/hiro.jpg);background-position:center center;background-repeat:no-repeat;background-attachment:fixed;background-size:cover;background-color:#ffffff}@media only screen and (max-width : 600px){ module-hiro .wrap-module,[data-is="module-hiro"] .wrap-module{display:block} module-hiro .wrap-module .wrap-explain,[data-is="module-hiro"] .wrap-module .wrap-explain{height:100%;padding-top:48px;justify-content:center} module-hiro .wrap-module .wrap-explain .explain .texts p,[data-is="module-hiro"] .wrap-module .wrap-explain .explain .texts p{font-size:22px;text-align:center}}', '', function(opts) {
+riot.tag2('module-hiro', '<div class="wrap-module f flex-around"> <div class="wrap-explain f fm"> <div class="explain"> <div class="texts mb50"> <p each="{item in texts}">{item}</p> </div> <item-cta-button content="{cta}"></item-cta-button> </div> </div> <div class="wrap-img f fm s-hide"><img src="./img/contents/iPhone.png"></div> </div> <div class="bg"></div>', 'module-hiro,[data-is="module-hiro"]{position:relative;display:block;width:100%;height:80vh} module-hiro .wrap-module,[data-is="module-hiro"] .wrap-module{position:relative;width:100%;height:100%;left:0;top:0;z-index:10;margin:0 auto;width:90%} module-hiro .wrap-module .wrap-explain,[data-is="module-hiro"] .wrap-module .wrap-explain{height:100%;padding-top:48px} module-hiro .wrap-module .wrap-explain .explain .texts p,[data-is="module-hiro"] .wrap-module .wrap-explain .explain .texts p{font-size:32px} module-hiro .wrap-module .wrap-img,[data-is="module-hiro"] .wrap-module .wrap-img{padding-top:48px;width:300px;height:100%} module-hiro .bg,[data-is="module-hiro"] .bg{position:absolute;display:block;width:100%;height:100%;left:0;top:0;background-image:url(img/contents/hiro2.jpg);background-position:center center;background-repeat:no-repeat;background-attachment:fixed;background-size:cover;background-color:#ffffff}@media only screen and (max-width : 600px){ module-hiro .wrap-module,[data-is="module-hiro"] .wrap-module{display:block} module-hiro .wrap-module .wrap-explain,[data-is="module-hiro"] .wrap-module .wrap-explain{height:100%;padding-top:48px;justify-content:center} module-hiro .wrap-module .wrap-explain .explain .texts p,[data-is="module-hiro"] .wrap-module .wrap-explain .explain .texts p{font-size:22px;text-align:center}}', '', function(opts) {
     this.texts = [
       "採用を簡単に、",
       "採用をより確実に"
     ]
 
     this.cta = {
-      label: "サインアップ",
+      label: "今すぐ利用開始",
       href: "https://app.truffle.ai/"
     }
 });
@@ -236,7 +236,7 @@ riot.tag2('module-user-flow', '<div class="wrap-module pb40"> <div class="wrap-m
     ]
 
     this.cta = {
-      label: "無料ではじめる",
+      label: "無料でボットを作成してみる",
       href: "https://app.truffle.ai/"
     }
 
@@ -358,7 +358,7 @@ riot.tag2('chat-contact-window', '<div class="wrap-chat-window"> <div class="wra
     }
 });
 
-riot.tag2('float-action-button', '<a class="f fh" onclick="{openChatWindow}"><img src="./img/icon/chat.svg"></a>', 'float-action-button,[data-is="float-action-button"]{position:fixed;z-index:10;display:block;width:58px;height:58px;right:12px;bottom:12px;border-radius:50%;background:#ffcc33;filter:drop-shadow(1px 1px 1px rgba(100,100,100,0.6))} float-action-button a,[data-is="float-action-button"] a{width:100%;height:100%} float-action-button a img,[data-is="float-action-button"] a img{width:34px;height:34px}', '', function(opts) {
+riot.tag2('float-action-button', '<a class="f fh" onclick="{openChatWindow}"><img src="./img/icon/chat.svg"></a>', 'float-action-button,[data-is="float-action-button"]{position:fixed;z-index:101;display:block;width:58px;height:58px;right:12px;bottom:12px;border-radius:50%;background:#ffcc33;filter:drop-shadow(1px 1px 1px rgba(100,100,100,0.6))} float-action-button a,[data-is="float-action-button"] a{width:100%;height:100%} float-action-button a img,[data-is="float-action-button"] a img{width:34px;height:34px}', '', function(opts) {
     this.openChatWindow = () => {
       $('chat-contact-window').fadeIn(400);
     }
