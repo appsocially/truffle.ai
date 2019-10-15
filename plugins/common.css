@@ -30,6 +30,21 @@ a {
   font-family: "Yu Gothic", Noto Sans Japanese, Noto Sans JP , helvetica, arial, 'hiragino kaku gothic pro', meiryo, 'ms pgothic', sans-serif;
 }
 
+input {
+  font-family: "Yu Gothic", Noto Sans Japanese, Noto Sans JP , helvetica, arial, 'hiragino kaku gothic pro', meiryo, 'ms pgothic', sans-serif;
+}
+
+input::placeholder {
+  font-family: "Yu Gothic", Noto Sans Japanese, Noto Sans JP , helvetica, arial, 'hiragino kaku gothic pro', meiryo, 'ms pgothic', sans-serif;
+}
+
+textarea {
+  font-family: "Yu Gothic", Noto Sans Japanese, Noto Sans JP , helvetica, arial, 'hiragino kaku gothic pro', meiryo, 'ms pgothic', sans-serif;
+}
+
+textarea::placeholder {
+  font-family: "Yu Gothic", Noto Sans Japanese, Noto Sans JP , helvetica, arial, 'hiragino kaku gothic pro', meiryo, 'ms pgothic', sans-serif;
+}
 
 /*
 html {
