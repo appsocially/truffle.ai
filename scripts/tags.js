@@ -166,8 +166,8 @@ riot.tag2('module-price-table', '<div class="wrap-module"> <item-h2 if="{opts.co
 riot.tag2('module-price', '<div class="wrap-module py40"> <h2 class="mb24">料金</h2> <div class="wrap-price py10"> <div class="mb20" each="{item in content}"> <h3 class="mb8">{item.title}</h3> <p>{item.text}</p> </div> </div> <div class="mt40 f fc"> <item-cta-button content="{cta}"></item-cta-button> </div> </div>', 'module-price,[data-is="module-price"]{display:block;width:100%;background:#ffffff} module-price .wrap-module,[data-is="module-price"] .wrap-module{width:90%;max-width:880px;margin:0 auto} module-price .wrap-module h2,[data-is="module-price"] .wrap-module h2{text-align:center;font-size:32px}', '', function(opts) {
     this.content = [
       {
-        title: '実際の応募数に応じた料金プラン',
-        text: '面接予約が確定した時にのみ、1件3000円が課金されます。毎月3件までは無料で利用できるので、応募が少ない時も安心して採用活動ができます',
+        title: '応募数に応じた安心プラン',
+        text: '面接予約が確定した時にのみ、1件3000円が課金されます。面接が確定した時のみの課金なので、無理なく採用活動が続けられます。',
       },
       {
         title: '14日間無料トライアル',
