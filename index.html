@@ -1,27 +1,44 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>Truffle Ai</title>
-  </head>
-  <body>
-    <div>
-      <h2>Truffle Ai</h2>
-      <p>Comming Soom</p>
-    </div>
-  </body>
-</html>
 
-<style>
-body {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-}
-h2 {
-  text-align: center;
-}
-p {
-  text-align: center;
-}
-</style>
+<!DOCTYPE html><html><head><script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({‘gtm.start’:new Date().getTime(),event:‘gtm.js’});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!=‘dataLayer’?‘&l=‘+l:‘’;j.async=true;j.src=’https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,‘script’,‘dataLayer’,‘GTM-5FXPG5X’);</script><meta charset="utf-8"><meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1,maximum-scale=1"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"><link type="image/x-icon" rel="shortcut icon" href="./images/favicon.png"><title>Truffle AI</title><meta name="description" content="description"><meta name="keywords" content="key,key"><meta property="og:title" content="Truffle AI"><meta property="og:type" content="website"><meta property="og:description" content="Truffle AIは応募から面接までの採用業務を全て自動で完了するチャットボットです。採用担当者の仕事を大幅に削減しながら、より確実な人材採用をサポートします。"><meta property="og:url" content="https://truffle.ai/"><meta property="og:image" content="https://truffle.ai/img/ogp.jpg"><meta property="og:site_name" content="Truffle AI"><meta property="og:email" content=""><meta name="twitter:card" content="summary_large_image"><meta name="twitter:site" content="@as_kou"><meta name="twitter:creator" content="@as_kou"><link rel="stylesheet" href="./plugins/meltline.css"><link rel="stylesheet" href="./plugins/common.css"><script src="https://cdnjs.cloudflare.com/ajax/libs/riot/2.3.18/riot+compiler.js"></script><script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.js"></script><script type="text/javascript" src="./scripts/common.js"></script><script type="text/javascript" src="./contentsScript/menu.js"></script><script type="text/javascript" src="./contentsScript/contents.js"></script><!--script(src='https://cdn.rawgit.com/phi-jp/firerest/f0bf0e7de8fcbc9ef7107115ff2b64f3f9738b7b/firerest.js')--><!-- script(src="https://apis.google.com/js/client.js?onload=onLoadCallbackFunction")--><script async src="https://www.googletagmanager.com/gtag/js?id=UA-141294755-1"></script><script>window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'UA-141294755-1');
+</script></head><body><noscript><iframe src=“https://www.googletagmanager.com/ns.html?id=GTM-5FXPG5X” height=“0" width=“0” style=“display:none;visibility:hidden”></iframe>
+//iframe(src=“https://www.googletagmanager.com/ns.html?id=GTM-5FXPG5X" height=“0" width=“0” style=“display:none;visibility:hidden”)</noscript><app></app><script src="./scripts/tags.js"></script><script>riot.route('/chat', function(tagName) {
+  riot.mount('modal-content', 'page-chat', {content: 'content'});
+  riot.update();
+})
+
+riot.route('/about', function(tagName) {
+
+  if(riot.enableFadeIn) $('content').removeClass('not-opacity');
+
+  riot.enableFadeIn = true;
+
+  $(document).trigger("custom:close");
+
+  setTimeout(function() {
+    $('content').addClass('not-opacity');
+    riot.mount('content', 'page-about', {content: 'content'});
+    riot.update();
+  }, 400);
+})
+
+riot.route(function(tagName) {
+  
+  if(riot.enableFadeIn) $('content').removeClass('not-opacity');
+
+  riot.enableFadeIn = true;
+
+  $(document).trigger("custom:close");
+
+  setTimeout(function() {
+    $('content').addClass('not-opacity');
+    riot.mount('content', 'page-top', {content: 'content'});
+    riot.update();
+  }, 400);
+});
+
+riot.route.start(true);
+
+var tags = riot.mount('app');</script></body></html>
