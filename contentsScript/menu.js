@@ -22,15 +22,15 @@ var MenuContent = [
     label: 'トップ',
     func: 'to-top',
   },
-  {
-    label: 'サインアップ',
-    href: 'https://app.truffle.ai',
-    target: 'brank',
-  },
-  {
-    label: 'お問い合わせ',
-    func: 'to-contact',
-  },
+  // {
+  //   label: 'サインアップ',
+  //   href: 'https://app.truffle.ai',
+  //   target: 'brank',
+  // },
+  // {
+  //   label: 'お問い合わせ',
+  //   func: 'to-contact',
+  // },
 ];
 
 var MenuLogo = './img/contents/truffle-logo.svg';
@@ -42,7 +42,7 @@ var ChatcenterHrefForContact = 'https://ii.chatcenter.ai/chat/TruffleAI';
 var FooterMenuContent = [
   {
     label: '運営組織',
-    href: 'https://appsocial.ly/',
+    href: 'https://truffletechnologies.co.jp/',
     target: 'brank',
   },
   {
