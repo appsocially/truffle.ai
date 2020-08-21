@@ -343,7 +343,7 @@ riot.tag2('page-test', '<div class="wrap-page"></div> <h2>test</h2>', 'page-test
     });
 });
 
-riot.tag2('page-top', '<div class="wrap-page"> <module-hiro></module-hiro> <module-about></module-about> <module-user-flow></module-user-flow> <module-problem></module-problem> <module-what></module-what> <module-example></module-example> <module-keep-in-touch></module-keep-in-touch> <footer></footer> </div> <chat-contact-window></chat-contact-window>', 'page-top .wrap-page,[data-is="page-top"] .wrap-page{display:block;width:100%;height:100%;background:#FFFFFF}', '', function(opts) {
+riot.tag2('page-top', '<div class="wrap-page"> <module-hiro></module-hiro> <module-about></module-about> <module-user-flow></module-user-flow> <module-problem></module-problem> <module-what></module-what> <module-example></module-example> <footer></footer> </div> <chat-contact-window></chat-contact-window>', 'page-top .wrap-page,[data-is="page-top"] .wrap-page{display:block;width:100%;height:100%;background:#FFFFFF}', '', function(opts) {
     var self = this;
 
     this.contents = Contents;
